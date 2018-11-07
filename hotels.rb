@@ -18,11 +18,12 @@ current_sum = 0
 
 number_of_hotels.times do |i|
   current_sum += hotels_prices[i]
+
   while current_sum > sroljo_prise
     current_sum -= hotels_prices[start]
     start += 1
-    max_sum = [max_sum, current_sum].max if current_sum <= sroljo_prise
   end
+
   max_sum = [max_sum, current_sum].max if current_sum <= sroljo_prise
 end
 
